@@ -113,7 +113,7 @@ export default function PhotoPairGame({
             {/* Back of the card */}
             {!selected.includes(index) && !matched.includes(index) && (
               <motion.div
-                className="w-full h-full bg-[#ffcaca] rounded-sm lg:rounded-[25%] absolute z-10"
+                className="w-full h-full bg-[#ffcaca] rounded-[25%] lg:rounded-[25%] absolute z-10"
                 initial={{ rotateY: 0 }}
                 animate={{
                   rotateY:
@@ -140,7 +140,7 @@ export default function PhotoPairGame({
                   alt={`Imagen ${index + 1}`}
                   layout="fill"
                   objectFit="cover"
-                  className="rounded-sm lg:rounded-[25%] object-cover"
+                  className="rounded-[25%] lg:rounded-[25%] object-cover"
                 />
               </motion.div>
             )}
@@ -152,7 +152,7 @@ export default function PhotoPairGame({
                 animate={{ scale: [1, 1.1, 1], opacity: [1, 0, 1] }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="w-full h-full bg-red-500 rounded-sm lg:rounded-[25%]"></div>
+                <div className="w-full h-full bg-red-500 rounded-[25%] lg:rounded-[25%]"></div>
               </motion.div>
             )}
           </motion.div>
