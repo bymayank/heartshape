@@ -6,24 +6,23 @@ import { useState, useEffect } from "react";
 
 // 18 images
 const images = [
-  "game-photos/1.avif",
-  "game-photos/2.avif",
-  "game-photos/3.avif",
-  "game-photos/4.avif",
-  "game-photos/5.avif",
-  "game-photos/6.avif",
-  "game-photos/7.avif",
-  "game-photos/8.avif",
-  "game-photos/9.avif",
-  "game-photos/10.avif",
-  "game-photos/11.avif",
-  "game-photos/12.avif",
-  "game-photos/13.avif",
-  "game-photos/14.avif",
-  "game-photos/15.avif",
-  "game-photos/16.avif",
-  "game-photos/17.avif",
-  "game-photos/18.avif",
+  "/game-photos/1.avif",
+  "/game-photos/2.avif",
+  "/game-photos/3.avif",
+  "/game-photos/4.avif",
+  "/game-photos/5.avif",
+  "/game-photos/6.avif",
+  "/game-photos/7.avif",
+  "/game-photos/8.avif",
+  "/game-photos/9.avif",
+  "/game-photos/10.avif",
+  "/game-photos/11.avif",
+  "/game-photos/12.avif",
+  "/game-photos/13.avif",
+  "/game-photos/14.avif",
+  "/game-photos/15.avif",
+  "/game-photos/16.avif",
+  "/game-photos/18.avif",
 ];
 
 // Create 18 pairs of images (36 images in total)
@@ -40,12 +39,13 @@ const shuffleArray = (array: string[]) => {
 const heartLayout = [
   [null, null, 0, 1, null, 2, 3, null, null],
   [null, 4, 5, 6, 7, 8, 9, 10, null],
-  [11, 12, 13, 14, 15, 16, 17, 18, 19],
-  [null, 20, 21, 22, 23, 24, 25, 26, null],
-  [null, null, 27, 28, 29, 30, 31, null, null],
-  [null, null, null, 32, 33, 34, null, null, null],
-  [null, null, null, null, 35, null, null, null, null],
+  [null, 11, 12, 13, 14, 15, 16, 17, null],
+  [null, 18, 19, 20, 21, 22, 23, 24, null],
+  [null, null, 25, 26, 27, 28, 29, null, null],
+  [null, null, null, 30, 31, 32, null, null, null],
+  [null, null, null, null, 33, null, null, null, null],
 ];
+
 
 type ValentinesProposalProps = {
   handleShowProposal: () => void;
@@ -113,7 +113,7 @@ export default function PhotoPairGame({
             {/* Back of the card */}
             {!selected.includes(index) && !matched.includes(index) && (
               <motion.div
-                className="w-full h-full bg-gray-300 rounded-sm lg:rounded-md absolute z-10"
+                className="w-full h-full bg-[#ffcaca] rounded-sm lg:rounded-[25%] absolute z-10"
                 initial={{ rotateY: 0 }}
                 animate={{
                   rotateY:
@@ -140,7 +140,7 @@ export default function PhotoPairGame({
                   alt={`Imagen ${index + 1}`}
                   layout="fill"
                   objectFit="cover"
-                  className="rounded-sm lg:rounded-md object-cover"
+                  className="rounded-sm lg:rounded-[25%] object-cover"
                 />
               </motion.div>
             )}
@@ -152,7 +152,7 @@ export default function PhotoPairGame({
                 animate={{ scale: [1, 1.1, 1], opacity: [1, 0, 1] }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="w-full h-full bg-red-500 rounded-sm lg:rounded-md"></div>
+                <div className="w-full h-full bg-red-500 rounded-sm lg:rounded-[25%]"></div>
               </motion.div>
             )}
           </motion.div>
