@@ -74,7 +74,7 @@ export default function PhotoPairGame({
         setIncorrect([firstIndex, index]);
         setTimeout(() => setIncorrect([]), 1000); // Clear incorrect after 1 second
       }
-      setTimeout(() => setSelected([]), 1000);
+      setTimeout(() => setSelected([]), 1000); 
     }
   };
 
